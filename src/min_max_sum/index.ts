@@ -1,10 +1,9 @@
+"use strict";
 /*
 Given five positive integers, find the minimum and maximum values that 
 can be calculated by summing exactly four of the five integers. 
 Then print the respective minimum and maximum values as a single line 
 of two space-separated long integers.
-
-
 */
 
 function reducer(arr: number[], index: number): number {
@@ -21,8 +20,4 @@ function minMaxSum(arr: number[]): void {
   console.log(min, max);
 }
 
-function main() {
-  minMaxSum([1, 2, 3, 4, 5]);
-}
-
-main();
+export default minMaxSum;
