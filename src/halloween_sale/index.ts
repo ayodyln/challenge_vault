@@ -62,6 +62,7 @@
 
 function howManyGames(p: number, d: number, m: number, s: number): number {
   // Return the number of games you can buy
+    
 }
 
 export default howManyGames;
