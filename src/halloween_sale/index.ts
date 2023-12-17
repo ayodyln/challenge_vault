@@ -62,7 +62,18 @@
 
 function howManyGames(p: number, d: number, m: number, s: number): number {
   // Return the number of games you can buy
-    
+  let totalGames: number = 0;
+  let currPrice: number = p;
+
+  while (s >= currPrice) {
+    totalGames++;
+    s -= currPrice;
+    currPrice = Math.max(currPrice - d, m);
+  }
+
+  return totalGames;
 }
+
+console.log(howManyGames(20, 3, 6, 80));
 
 export default howManyGames;
