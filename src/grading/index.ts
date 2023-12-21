@@ -24,17 +24,14 @@ function gradingStudents(grades: number[]): number[] {
 
   for (let i = 0; i < grades.length; i++) {
     const grade = grades[i];
-    const nextMultiple = Math.ceil(grade / 5) * 5;
     if (grade < 38) {
       output.push(grade);
       continue;
     }
 
-    if (nextMultiple - grade < 3) {
-      output.push(nextMultiple);
-    } else {
-      output.push(grade);
-    }
+    const nextMultiple = Math.ceil(grade / 5) * 5;
+    if (nextMultiple - grade < 3) output.push(nextMultiple);
+    else output.push(grade);
   }
 
   return output;
